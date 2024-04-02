@@ -8,13 +8,13 @@ module.exports = {
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:prettier/recommended",
         "plugin:import/errors",
-        "plugin:import/warnings"
+        "plugin:import/warnings",
     ],
     plugins: ["@typescript-eslint", "prettier", "import"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         tsconfigRootDir: __dirname,
-        project: ["./tsconfig.json"]
+        project: ["./tsconfig.json"],
     },
     rules: {
         "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -31,42 +31,31 @@ module.exports = {
             "error",
             {
                 before: false,
-                after: true
-            }
+                after: true,
+            },
         ],
         "key-spacing": [
             "error",
             {
                 beforeColon: false,
-                afterColon: true
-            }
+                afterColon: true,
+            },
         ],
         "keyword-spacing": [
             "error",
             {
-                before: true
-            }
+                before: true,
+            },
         ],
         "arrow-spacing": [
             "error",
             {
                 before: true,
-                after: true
-            }
+                after: true,
+            },
         ],
         curly: ["error", "all"],
-        "prettier/prettier": [
-            "error",
-            {
-                endOfLine: "auto",
-                printWidth: 150,
-                tabWidth: 4,
-                useTabs: false,
-                semi: true,
-                singleQuote: false,
-                bracketSpacing: true
-            }
-        ],
+        "prettier/prettier": "error",
         "import/no-unresolved": [2, { ignore: ["\\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$"] }],
         "sort-imports": [
             "error",
@@ -75,8 +64,8 @@ module.exports = {
                 ignoreDeclarationSort: true,
                 ignoreMemberSort: true,
                 memberSyntaxSortOrder: ["none", "all", "single", "multiple"],
-                allowSeparatedGroups: true
-            }
+                allowSeparatedGroups: true,
+            },
         ],
         "import/order": [
             "error",
@@ -86,28 +75,28 @@ module.exports = {
                     {
                         pattern: "./src/**",
                         group: "external",
-                        position: "after"
-                    }
+                        position: "after",
+                    },
                 ],
                 pathGroupsExcludedImportTypes: ["builtin"],
                 "newlines-between": "always",
                 alphabetize: {
-                    order: "asc"
-                }
-            }
-        ]
+                    order: "asc",
+                },
+            },
+        ],
     },
     settings: {
         "import/parsers": {
-            "@typescript-eslint/parser": [".ts", ".tsx"]
+            "@typescript-eslint/parser": [".ts", ".tsx"],
         },
         "import/resolver": {
             node: {
-                extensions: [".js", ".jsx", ".ts", ".tsx"]
+                extensions: [".js", ".jsx", ".ts", ".tsx"],
             },
             typescript: {
-                alwaysTryTypes: true
-            }
-        }
-    }
+                alwaysTryTypes: true,
+            },
+        },
+    },
 };
