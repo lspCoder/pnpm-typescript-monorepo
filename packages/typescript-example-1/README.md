@@ -1,3 +1,9 @@
+# Typescript example #1
+
+The first typescript example for the Monorepo example
+
+## License
+
 MIT License
 
 Copyright (c) 2023 Luke Baker
