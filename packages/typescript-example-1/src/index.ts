@@ -3,7 +3,8 @@ import "./index.css";
 import { world } from "@x-viewer/typescript-example-2";
 
 /**
- * Hello World
+ * @description Hello World
+ * @returns
  */
 export function helloWorld() {
     return `Hello ${world()}`;
