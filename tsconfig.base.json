@@ -24,6 +24,7 @@
     "emitDecoratorMetadata": false,
 
     "paths": {
+      // Modify as needed
       "@x-viewer/*": ["packages/*/src"]
     },
   }

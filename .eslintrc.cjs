@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+const path = require("path");
+
 module.exports = {
     root: true,
     env: { browser: true, es2021: true, node: true },
@@ -92,10 +93,17 @@ module.exports = {
         },
         "import/resolver": {
             node: {
+                paths: "packages/*/src",
                 extensions: [".js", ".jsx", ".ts", ".tsx"],
             },
             typescript: {
                 alwaysTryTypes: true,
+                project: [
+                    path.resolve(__dirname, ".tsconfig.json"), // root tsconfig
+                    path.resolve(__dirname, "./packages/typescript-example-1/tsconfig.json"),
+                    path.resolve(__dirname, "./packages/typescript-example-2/tsconfig.json"),
+                    /* ...rest of projects path to its tsconfig */
+                ],
             },
         },
     },
