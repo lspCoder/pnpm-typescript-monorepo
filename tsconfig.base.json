@@ -5,9 +5,17 @@
     /* Basic Options */
     "incremental": false,
     "declaration": true,
+    "emitDeclarationOnly": true,
     "allowJs": true,
-    "noEmit": true,
+    "noEmit": false,
     
+    /* Build Options */
+    "target": "ES6",
+    "module": "esnext",
+    "types": ["node"],
+    "moduleResolution": "node",
+    "lib": ["dom", "ES5", "ES6", "ESNext"],
+    "downlevelIteration": true,
 
     /* Strict Type-Checking Options */
     "noImplicitAny": true,

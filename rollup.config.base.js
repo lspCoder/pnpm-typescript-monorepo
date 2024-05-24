@@ -32,19 +32,19 @@ export default defineConfig([
             typescript(),
             eslint({
                 fix: true,
-                include: ["*.js", "*.ts"]
+                include: ["*.js", "*.ts"],
             }),
             // eslint-disable-next-line @typescript-eslint/no-unsafe-call
             postcss({
                 plugins: [],
-                extensions: [".css"]
+                extensions: [".css"],
             }),
-            isProd && terser()
+            isProd && terser(),
         ],
         external: ["ms"],
         output: [
             // { file: pkg.main, format: 'umd', name: "libName" },
-            { file: pkg.module, format: "es" }
-        ]
-    }
+            { file: pkg.module, format: "es" },
+        ],
+    },
 ]);
